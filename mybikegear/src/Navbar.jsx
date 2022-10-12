@@ -1,6 +1,6 @@
 import React from "react";
 
-const LandingPageHeader = () => {
+const Navbar = () => {
   return (
     <>
       {" "}
@@ -99,4 +99,4 @@ const LandingPageHeader = () => {
   );
 };
 
-export default LandingPageHeader;
+export default Navbar;
