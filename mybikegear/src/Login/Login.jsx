@@ -1,7 +1,30 @@
-import React from 'react'
+import {useState} from 'react'
+import { redirect , useNavigate} from 'react-router-dom'
 import "./Login.css"
 
 const Login = () => {
+
+   const [isFilled, setIsFilled] = useState(true);
+
+  const navigate = useNavigate();
+  const onClickHander = (e) => {
+
+    const email = document.getElementById("emailLogin").value;
+    const password = document.getElementById("passwordLogin").value;
+
+
+    if ( !(email && password  )){
+      setIsFilled(false);
+      return;
+    }else{
+      setIsFilled(true);
+    }
+
+    navigate( "/user-page", {replace:true} )
+
+  }
+
+
   return (
     <section className="vh-100 login-background  col-sm-12 login-card text-center">
     <div className="h-100 col-lg-6 col-sm-12 m-auto">
@@ -19,13 +42,11 @@ const Login = () => {
                     <span className="h1 fw-bold m-auto">
                       <img
                         className="img-fluid"
-                        src={require("../assets/img/slide/landingpage_main.png")}
+                        src={require("../assets/img/slide/logo.png")}
                         alt="..."
                       />
                     </span>
                   </div>
-
-
                   <h5
                     className="fw-normal text-center pb-3"
                     style={{ letterSpacing: "1px" }}
@@ -54,11 +75,13 @@ const Login = () => {
                     
                   </div>
 
+                  { !isFilled&& <h5> Email or Password not entered </h5> }
+
                   <div className=" d-flex flex-column w-75 m-auto text-center ">
                   <button
-
-                        className="btn btn-dinamo btn-lg "
+                        className="btn btn-primary btn-lg "
                         type="button"
+                        onClick={onClickHander}
                       >
                         Login
                       </button>
@@ -74,9 +97,11 @@ const Login = () => {
                     </h6>
                     <button
                       className="btn btn-secondary text-light w-75 m-auto font-weight-bold"
-
+                      onClick = { ()=> {
+                        navigate ("/register", {replace: true})
+                      } }
                     >
-                      {" "}
+
                       Join{" "}
                     </button>
                   </div>

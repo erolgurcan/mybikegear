@@ -1,28 +1,26 @@
 import React from "react";
-
+import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
       {" "}
-      <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
-          <h1 class="logo me-auto">
+      <header id="header" className="">
+        <div className="container d-flex align-items-center">
+          <h1 className="logo me-auto">
             <a href="index.html">
               <span>My Bike</span> Gear
             </a>
           </h1>
 
-          <nav id="navbar" class="navbar order-last order-lg-0">
+          <nav id="navbar" className="navbar order-last order-lg-0">
             <ul>
               <li>
-                <a href="index.html" class="active">
-                  Home
-                </a>
+                  <Link to = "/"> Home </Link>
               </li>
 
-              <li class="dropdown">
+              <li className="dropdown">
                 <a href="#">
-                  <span>About</span> <i class="bi bi-chevron-down"></i>
+                  <span>About</span> <i className="bi bi-chevron-down"></i>
                 </a>
                 <ul>
                   <li>
@@ -34,10 +32,10 @@ const Navbar = () => {
                   <li>
                     <a href="testimonials.html">Testimonials</a>
                   </li>
-                  <li class="dropdown">
+                  <li className="dropdown">
                     <a href="#">
                       <span>Deep Drop Down</span>{" "}
-                      <i class="bi bi-chevron-right"></i>
+                      <i className="bi bi-chevron-right"></i>
                     </a>
                     <ul>
                       <li>
@@ -61,13 +59,10 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a href="/login">Login</a>
+                <Link to = "/login" >Login</Link>
               </li>
               <li>
-                <a href="portfolio.html">My Gears</a>
-              </li>
-              <li>
-                <a href="pricing.html">Market Place</a>
+                <Link to = "/register">Register</Link>
               </li>
               <li>
                 <a href="blog.html">Blog</a>
@@ -76,21 +71,21 @@ const Navbar = () => {
                 <a href="contact.html">Contact</a>
               </li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
+            <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>
 
-          <div class="header-social-links d-flex">
-            <a href="#" class="twitter">
-              <i class="bu bi-twitter"></i>
+          <div className="header-social-links d-flex">
+            <a href="#" className="twitter">
+              <i className="bu bi-twitter"></i>
             </a>
-            <a href="#" class="facebook">
-              <i class="bu bi-facebook"></i>
+            <a href="#" className="facebook">
+              <i className="bu bi-facebook"></i>
             </a>
-            <a href="#" class="instagram">
-              <i class="bu bi-instagram"></i>
+            <a href="#" className="instagram">
+              <i className="bu bi-instagram"></i>
             </a>
-            <a href="#" class="linkedin">
-              <i class="bu bi-linkedin"></i>
+            <a href="#" className="linkedin">
+              <i className="bu bi-linkedin"></i>
             </a>
           </div>
         </div>
