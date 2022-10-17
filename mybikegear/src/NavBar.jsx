@@ -1,6 +1,6 @@
 import React from "react";
 
-const LandingPageHeader = () => {
+const Navbar = () => {
   return (
     <>
       {" "}
@@ -8,7 +8,7 @@ const LandingPageHeader = () => {
         <div class="container d-flex align-items-center">
           <h1 class="logo me-auto">
             <a href="index.html">
-              <span>Com</span>pany
+              <span>My Bike</span> Gear
             </a>
           </h1>
 
@@ -61,13 +61,13 @@ const LandingPageHeader = () => {
               </li>
 
               <li>
-                <a href="services.html">Services</a>
+                <a href="/login">Login</a>
               </li>
               <li>
-                <a href="portfolio.html">Portfolio</a>
+                <a href="portfolio.html">My Gears</a>
               </li>
               <li>
-                <a href="pricing.html">Pricing</a>
+                <a href="pricing.html">Market Place</a>
               </li>
               <li>
                 <a href="blog.html">Blog</a>
@@ -99,4 +99,4 @@ const LandingPageHeader = () => {
   );
 };
 
-export default LandingPageHeader;
+export default Navbar;

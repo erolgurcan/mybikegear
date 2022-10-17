@@ -11,8 +11,10 @@ const LandingPageHero = () => {
         <div class="carousel-item active">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2>Welcome to <span>Company</span></h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2>Welcome to <span>My Bike Gear</span></h2>
+              <p>
+                You can build your dream bike, store and share with your friends. Even you can sell your bike to other users. This is a platform for bike lovers. 
+              </p>
               <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
             </div>
           </div>
