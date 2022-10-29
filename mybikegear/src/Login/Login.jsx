@@ -20,7 +20,7 @@ const Login = () => {
       setIsFilled(true);
     }
 
-    navigate( "/user-page", {replace:true} )
+    navigate( "/user-profile", {replace:true} )
 
   }
 

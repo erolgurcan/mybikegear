@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
       {" "}
-      <header id="header" className="">
+      <header id="header" className="navbar">
         <div className="container d-flex align-items-center">
           <h1 className="logo me-auto">
             <a href="index.html">
@@ -15,13 +15,25 @@ const Navbar = () => {
           <nav id="navbar" className="navbar order-last order-lg-0">
             <ul>
               <li>
-                  <Link to = "/"> Home </Link>
+                <Link
+                  className="btn btn-primary text-center p-1 text-white m-2"
+                  to="/"
+                >
+                  {" "}
+                  Home{" "}
+                </Link>
               </li>
 
               <li className="dropdown">
-                <a href="#">
-                  <span>About</span> <i className="bi bi-chevron-down"></i>
-                </a>
+                <li>
+                  <Link
+                    className="btn btn-primary text-center p-1 text-white "
+                    to="/"
+                  >
+                    {" "}
+                    About
+                  </Link>
+                </li>
                 <ul>
                   <li>
                     <a href="about.html">About Us</a>
@@ -59,16 +71,29 @@ const Navbar = () => {
               </li>
 
               <li>
-                <Link to = "/login" >Login</Link>
+                <Link
+                  className="btn btn-primary text-center p-1 text-white m-2"
+                  to="/login"
+                >
+                  Login
+                </Link>
               </li>
               <li>
-                <Link to = "/register">Register</Link>
+                <Link
+                  className="btn btn-primary text-center p-1 text-white m-2"
+                  to="/signup"
+                >
+                  Register
+                </Link>
               </li>
+
               <li>
-                <a href="blog.html">Blog</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
+                <Link
+                  className="btn btn-primary text-center p-1 text-white m-2"
+                  to="/login"
+                >
+                  Login
+                </Link>
               </li>
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>
